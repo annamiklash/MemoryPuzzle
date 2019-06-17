@@ -1,4 +1,0 @@
-Player Name: erg; Clicks Number 5; Time: 00:03:343; Level of Difficulty: EASY
-Player Name: trh; Clicks Number 9; Time: 00:03:892; Level of Difficulty: EASY
-Player Name: ey; Clicks Number 13; Time: 00:09:743; Level of Difficulty: EASY
-Player Name: gg; Clicks Number 75; Time: 00:33:294; Level of Difficulty: MEDIUM
