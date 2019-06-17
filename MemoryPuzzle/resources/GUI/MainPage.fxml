@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea">
+    <top>
+        <Label fx:id="topLabel" alignment="TOP_CENTER" maxWidth="Infinity"
+               >
+            <text >MEMORY PUZZLE</text>
+            <font>
+                <Font name="Arial" size="20">
+                </Font>
+            </font>
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20"/>
+            </padding>
+        </Label>
+    </top>
+    <center>
+
+    </center>
+    <bottom>
+        <Label fx:id="bottomLabel" alignment="BOTTOM_CENTER" maxWidth="Infinity"
+        >
+            <text>GUI Hanna Miklash(c)</text>
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20"/>
+            </padding>
+        </Label>
+    </bottom>
+</BorderPane>
