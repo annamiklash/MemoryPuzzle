@@ -15,6 +15,10 @@ import java.util.Objects;
 
 public class GUIInitializer {
 
+    /**
+     * loading fxml for result page
+     * setting resultPage as center of MainPage
+     */
     public static void initResultPage(Stage stage, BorderPane mainPage) {
         try {
             final GridPane resultPage = processResultPage();
@@ -29,6 +33,9 @@ public class GUIInitializer {
         }
     }
 
+    /**
+     * creating gridPane with gameBoard, creating controller  and setting gameBoard as center
+     */
     public static void initGamePage(Stage stage, BorderPane mainPage, DifficultyLevelEnum difficultyLevel, String playerName) {
         final GameBoard gameBoard = new GameBoard();
         final GameController gameController = new GameController(stage,
@@ -42,26 +49,25 @@ public class GUIInitializer {
         stage.show();
     }
 
-    public static void initMainPage(Stage stage) {
+    /**
+     * initializing game launch window with settings
+     */
+    public static void initStartPage(Stage stage) {
         try {
-            final GridPane optionPage = processOptionPage(); //center part of border pane on launch window
-            final BorderPane mainPage = processMainPage(); //center part of border pane in game
+            final GridPane optionPage = processOptionPage(); //loading center part of border pane on launch window from fxml
+            final BorderPane mainPage = processMainPage(); //loading center part of border pane in game from fxml
 
             mainPage.setCenter(optionPage);
 
             //Setting title to the Stage
             stage.setTitle("Memory Puzzle");
 
-            //Adding scene to the stage
             stage.setScene(new Scene(mainPage));
-
-            //adding css
-            mainPage.getStylesheets().add("GUI/mainpagestyle.css");
-            optionPage.getStylesheets().add("GUI/optionpagestyle.css");
 
             stage.setResizable(false);
 
             //Displaying the contents of the stage
+            //To make stage different size depending on game state
             stage.hide();
             stage.show();
         } catch (IOException e) {
@@ -71,19 +77,29 @@ public class GUIInitializer {
 
     }
 
-    public static GridPane processOptionPage() throws IOException {
+    /**
+     * loader for launch window center grid pane
+     */
+    private static GridPane processOptionPage() throws IOException {
 
-        return FXMLLoader.load(Objects.requireNonNull(GUIInitializer.class.getClassLoader().getResource("GUI/OptionsPage.fxml")));  //loader for launch window center grid pane
+        return FXMLLoader.load(Objects.requireNonNull(GUIInitializer.class.getClassLoader().getResource("GUI/OptionsPage.fxml")));
     }
 
-    public static BorderPane processMainPage() throws IOException {
+    /**
+     * loading game window
+     */
+    private static BorderPane processMainPage() throws IOException {
 
-        return FXMLLoader.load(Objects.requireNonNull(GUIInitializer.class.getClassLoader().getResource("GUI/MainPage.fxml"))); //loading game window
+        return FXMLLoader.load(Objects.requireNonNull(GUIInitializer.class.getClassLoader().getResource("GUI/MainPage.fxml")));
     }
 
-    public static GridPane processResultPage() throws IOException {
 
-        return FXMLLoader.load(Objects.requireNonNull(GUIInitializer.class.getClassLoader().getResource("GUI/ResultPage.fxml")));  //loader for result window center grid pane
+    /**
+     * loader for result window center grid pane
+     */
+    private static GridPane processResultPage() throws IOException {
+
+        return FXMLLoader.load(Objects.requireNonNull(GUIInitializer.class.getClassLoader().getResource("GUI/ResultPage.fxml")));
     }
 
 }

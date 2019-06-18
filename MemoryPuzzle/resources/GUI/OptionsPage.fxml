@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 <GridPane alignment="center" hgap="50" styleClass="root" vgap="50" xmlns:fx="http://javafx.com/fxml/1"
           xmlns="http://javafx.com/javafx/8.0.172-ea"
-          fx:controller="memorypuzzle.controller.OptionPageController">
+          fx:controller="memorypuzzle.controller.OptionPageController" stylesheets="GUI/optionpagestyle.css">
 
     <padding>
         <Insets bottom="25" left="25" right="25" top="25"/>

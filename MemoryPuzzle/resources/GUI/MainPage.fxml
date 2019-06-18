@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea">
+<BorderPane stylesheets="GUI/mainpagestyle.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea">
     <top>
         <Label fx:id="topLabel" alignment="TOP_CENTER" maxWidth="Infinity"
                >
@@ -19,6 +19,8 @@
         </Label>
     </top>
     <center>
+
+<!--        replaceable. depending on different state of the game-->
 
     </center>
     <bottom>

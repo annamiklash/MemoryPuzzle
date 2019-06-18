@@ -27,9 +27,6 @@ public class GameBoard extends GridPane {
         this.setVgap(5);
         this.setHgap(5);
 
-
-
-
         //Setting the Grid alignment
         this.setAlignment(Pos.CENTER);
     }

@@ -62,18 +62,17 @@ public class GameController {
     private void gameOver() {
         FileUtil.savingToFile(playerName, clickNumberController.getClickNumber(), timerController.getGameTime(), difficultyLevel); //saving results of a game to a file
 
-        GUIInitializer.initMainPage(stage); //restarts game
+        GUIInitializer.initStartPage(stage); //restarts game
     }
 
     private boolean isGameOver(List<Node> nodeList) {
         return nodeList.size() == 0;
     }
 
+    /**
+     * generating and initializing Grid, Timer and Clicks Counter
+     */
     private void initGame() {
-
-        /*
-        generating and initializing Grid, Timer and Clicks Counter
-         */
         nodeList = NodeGenerator.generateNodeList(difficultyLevel.getColumnNumber(), this);
 
         gameBoard.initNodesLocation(nodeList, difficultyLevel.getColumnNumber());

@@ -11,7 +11,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import memorypuzzle.controller.utils.FileUtil;
-import memorypuzzle.model.DifficultyLevelEnum;
 import memorypuzzle.model.Result;
 import memorypuzzle.view.initializer.GUIInitializer;
 
@@ -21,25 +20,20 @@ public class ResultPageController {
     private TableView resultTable;
 
     public void initialize() {
-        Result result = new Result("Ania", 1, "123:123:132", DifficultyLevelEnum.EASY.name());
-
-
-        TableColumn name = new TableColumn("Name");
-        TableColumn clicksCounter = new TableColumn("Clicks Counter");
-        TableColumn time = new TableColumn("Time");
-        TableColumn difficultyLevel = new TableColumn("Difficulty Level");
+        final TableColumn name = new TableColumn("Name");
+        final TableColumn clicksCounter = new TableColumn("Clicks Counter");
+        final TableColumn time = new TableColumn("Time");
+        final TableColumn difficultyLevel = new TableColumn("Difficulty Level");
 
         resultTable.getColumns().addAll(name, clicksCounter, time, difficultyLevel);
 
+        //set value type of columns in TableView
         name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
         clicksCounter.setCellValueFactory(new PropertyValueFactory<Result, Integer>("clicksCounter"));
         time.setCellValueFactory(new PropertyValueFactory<Result, String>("time"));
         difficultyLevel.setCellValueFactory(new PropertyValueFactory<Result, String>("difficultyLevel"));
 
-        resultTable.getItems().add(result);
-
         final ObservableList<Result> resultObservableList = FXCollections.observableArrayList(FileUtil.getResultList());
-//        final ObservableList<Result> resultObservableList = FXCollections.observableArrayList(result);
 
         resultTable.setItems(resultObservableList);
     }
@@ -50,10 +44,8 @@ public class ResultPageController {
         final Scene scene = ((Node) event.getSource()).getScene();
         final Stage stage = (Stage) scene.getWindow();
 
-        GUIInitializer.initMainPage(stage);
+        GUIInitializer.initStartPage(stage);
     }
-
-
 
 
 }

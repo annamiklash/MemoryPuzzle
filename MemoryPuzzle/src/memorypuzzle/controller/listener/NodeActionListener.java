@@ -17,11 +17,10 @@ public class NodeActionListener implements EventHandler {
         this.isImage = false;
     }
 
-    /*
-    checks whether it's a sleeve image or actual image. if later - then calls function
-    to check how many nodes are clicked/selected
+    /**
+     * checks whether it's a sleeve image or actual image. if later - then calls function
+     * to check how many nodes are clicked/selected
      */
-
     @Override
     public void handle(Event event) {
         if (!isImage) {

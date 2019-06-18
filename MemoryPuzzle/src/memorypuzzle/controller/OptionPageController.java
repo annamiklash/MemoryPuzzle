@@ -51,6 +51,9 @@ public class OptionPageController {
         }
     }
 
+    /**
+     * change center of mainPage from optionsPage to resultPage
+     */
     @FXML
     public void onShowResultButtonClick(ActionEvent event) {
         final Scene scene = ((Node) event.getSource()).getScene();
@@ -60,6 +63,9 @@ public class OptionPageController {
         GUIInitializer.initResultPage(stage, mainPage);
     }
 
+    /**
+     * changes center of mainPage from optionsPage to gameBoard
+     */
     private void startGame(ActionEvent event) {
         final Scene scene = ((Node) event.getSource()).getScene();
         final BorderPane mainPage = (BorderPane) scene.getRoot();
