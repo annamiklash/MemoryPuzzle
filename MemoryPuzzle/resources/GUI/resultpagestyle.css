@@ -1,8 +1,18 @@
-GridPane {
-
+GridPane, #resultTable {
     -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 40%, #f73197, #bc1e20);
 }
 
+#leaderboard {
+
+    -fx-background-color: #bc1e20;
+    -fx-font-size: 30px;
+    -fx-padding: 12px 12px;
+    -fx-text-alignment: center;
+    -fx-text-fill: #07adc6;
+
+}
+
+#leaderboard .te
 Button {
     -fx-background-color: linear-gradient(#07adc6, #e54dc8),
     linear-gradient(#b2f7eb 0%, #0ef7d0 50%, #169681 100%),
@@ -15,28 +25,3 @@ Button {
     -fx-padding: 10 20 10 20;
 }
 
-#splitButtonDifficulty {
-    -fx-background-color: derive(#1d1d1d, 50%);
-    -fx-border-color: cyan;
-}
-
-
-Text, Label {
-
-    -fx-font-weight: bold;
-    -fx-font-size: 15px;
-    -fx-text-fill: black;
-
-}
-
-Text {
-    -fx-border-color: cyan;
-    -fx-border-width: 5 0 0 0;
-    -fx-border-style: solid
-}
-
-#nameTextField {
-    -fx-font-size: 15px;
-    -fx-text-fill: black;
-    -fx-border-color: cyan;
-}

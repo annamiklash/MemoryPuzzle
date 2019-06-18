@@ -15,7 +15,7 @@ public class ClickNumberController {
     public ClickNumberController() {
         clickNumber = 0;
         initTextBox();
-        clickNumberTextBox.setFont(new Font(18));
+        clickNumberTextBox.setFont(new Font(15));
     }
 
     private void initTextBox() {

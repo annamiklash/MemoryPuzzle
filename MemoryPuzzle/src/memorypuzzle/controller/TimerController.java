@@ -23,7 +23,7 @@ public class TimerController {
 
     private void configureTimer() {
         timer = new Text("00:00:000");
-        timer.setFont(new Font(18));
+        timer.setFont(new Font(15));
 
 
     }

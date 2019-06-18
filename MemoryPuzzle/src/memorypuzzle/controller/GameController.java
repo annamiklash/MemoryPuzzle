@@ -1,8 +1,5 @@
 package memorypuzzle.controller;
 
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import memorypuzzle.controller.generator.NodeGenerator;
 import memorypuzzle.controller.utils.FileUtil;
@@ -65,7 +62,7 @@ public class GameController {
     private void gameOver() {
         FileUtil.savingToFile(playerName, clickNumberController.getClickNumber(), timerController.getGameTime(), difficultyLevel); //saving results of a game to a file
 
-        GUIInitializer.init(stage); //restarts game
+        GUIInitializer.initMainPage(stage); //restarts game
     }
 
     private boolean isGameOver(List<Node> nodeList) {

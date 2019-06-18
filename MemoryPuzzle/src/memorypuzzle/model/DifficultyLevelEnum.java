@@ -1,6 +1,6 @@
 package memorypuzzle.model;
 
-public enum DifficultyLevelEnum {
+public enum DifficultyLevelEnum  {
 
     EASY(2), //2x2 easy
 

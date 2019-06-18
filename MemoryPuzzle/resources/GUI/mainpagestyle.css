@@ -1,19 +1,13 @@
 BorderPane {
-    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #cc00b4 0%, #e8004d 100%);*/
-    -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 40% , #f73197, #bc1e20);
-    /*-fx-border-color: cyan;*/
-    /*-fx-border-width: 1 0 0 0;*/
-    /*-fx-border-style: solid*/
 
+    -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 40%, #f73197, #bc1e20);
 
 }
 
 #topLabel {
-    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #e8004d 0%, #cc00b4 100%);*/
+
     -fx-background-color: #bc1e20;
-
     -fx-font-size: 40px;
-
     -fx-padding: 12px 12px;
     -fx-text-alignment: center;
     -fx-text-fill: #07adc6;
@@ -27,16 +21,9 @@ BorderPane {
 
 }
 
-
-
 #bottomLabel {
 
-    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #e8004d 0%, #cc00b4 100%);*/
-    /*-fx-text-fill: #f46eaa;*/
     -fx-background-color: #bc1e20;
 
-    /*-fx-border-color: cyan;*/
-    /*-fx-border-width: 1 0 0 0;*/
-    /*-fx-border-style: solid*/
 }
 
